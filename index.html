@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeeksForGeeks Club Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button class="admin-login" onclick="window.location.href='admin_login.php'">Admin Login</button>
+    </header>
+    <main>
+        <h1>GeeksForGeeks Club Registration</h1>
+        <form action="./submit_registration.php" method="POST">
+            <!-- Personal Details -->
+            <fieldset>
+                <legend>Personal Details</legend>
+                <label for="student_name">Student Name:</label>
+                <input type="text" id="student_name" name="student_name" required>
+
+                <label for="usn">USN:</label>
+                <input type="text" id="usn" name="usn" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <!-- Academic Details -->
+            <fieldset>
+                <legend>Academic Details</legend>
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    <option value="CSE">CSE</option>
+                    <option value="ISE">ISE</option>
+                    <option value="AIML">AIML</option>
+                    <option value="AIDS">AIDS</option>
+                    <option value="CSE-AIML">CSE-AIML</option>
+                    <option value="CS-DS">CS(DS)</option>
+                    <option value="ECE">ECE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="MBA">MBA</option>
+                </select>
+
+                <label for="year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="1st">1st</option>
+                    <option value="2nd">2nd</option>
+                    <option value="3rd">3rd</option>
+                    <option value="4th">4th</option>
+                </select>
+            </fieldset>
+
+            <!-- Club Details -->
+            <fieldset>
+                <legend>Club Details</legend>
+                <label for="team">Team:</label>
+                <select id="team" name="team" required>
+                    <option value="Technical">Technical</option>
+                    <option value="Management">Management</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Organising">Organising</option>
+                </select>
+
+                <label for="interests">Interests:</label>
+                <textarea id="interests" name="interests" rows="4" placeholder="Describe your interests..." required></textarea>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
